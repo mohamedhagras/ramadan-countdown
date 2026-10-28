@@ -95,6 +95,125 @@ h1{font-family:"Reem Kufi","Readex Pro",serif;font-weight:700;font-size:clamp(32
 .ov p{color:#F3ECDF;font-size:14px}
 .ov .row{display:flex;gap:10px}
 .ov .row button{border:1px solid #F3ECDF;background:transparent;color:#F3ECDF;padding:8px 22px;border-radius:99px;font-size:15px}
+
+  
+/* Desktop layout - preserve original design */
+@media (min-width: 900px) {
+  body {
+    align-items: flex-start;
+    padding: 40px 32px 56px;
+  }
+
+  main {
+    max-width: 1180px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 48px;
+    align-items: start;
+  }
+
+  .moon,
+  #title,
+  .sub,
+  .today,
+  .tabs,
+  #live,
+  #done,
+  #nights,
+  .pray,
+  .verse,
+  #share {
+    min-width: 0;
+  }
+
+  .moon,
+  #title,
+  .sub,
+  .today,
+  .tabs {
+    grid-column: 1 / -1;
+  }
+
+  #live {
+    display: contents;
+  }
+
+  #pair {
+    grid-column: 1;
+    grid-row: 6;
+    margin-top: 28px;
+  }
+
+  #clock {
+    grid-column: 2;
+    grid-row: 6;
+    width: 100%;
+    max-width: none;
+    margin: 28px auto 24px;
+    align-self: center;
+  }
+
+  #rmday {
+    grid-column: 1;
+    grid-row: 7;
+  }
+
+  #ift {
+    grid-column: 2;
+    grid-row: 7;
+    max-width: none;
+    margin: 0 auto 24px;
+  }
+
+  #done {
+    grid-column: 1 / -1;
+  }
+
+  #nights {
+    grid-column: 1;
+    grid-row: 8;
+    max-width: none;
+    margin: 0 0 24px;
+  }
+
+  .pray {
+    grid-column: 1;
+    grid-row: 9;
+    max-width: none;
+    width: 100%;
+  }
+
+  .verse {
+    grid-column: 2;
+    max-width: none;
+    width: 100%;
+    margin-bottom: 24px;
+  }
+
+  .verse[aria-label="آية اليوم"] {
+    grid-row: 8;
+    border-top: 1px solid var(--line);
+    padding-top: 16px;
+  }
+
+  .verse[aria-label="أذكار"] {
+    grid-row: 9;
+  }
+
+  .verse[aria-label="أدعية"] {
+    grid-row: 10;
+  }
+
+  #share {
+    grid-column: 1 / -1;
+    justify-self: center;
+    margin-top: 8px;
+  }
+
+  .verse p {
+    font-size: clamp(20px, 1.8vw, 26px);
+  }
+}
 </style>
 </head>
 <body>
